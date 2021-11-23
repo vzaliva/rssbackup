@@ -1,0 +1,32 @@
+* RSS Backup
+
+  Simple script to backup content of RSS feed (incrementally).
+  It is written to backup my medium.com posts, but could be used
+  (although untested) for other feeds as well.
+
+  Each file is saved in JSON format using original encoding.
+  
+* Installation
+
+  Requires Python 3 and the following dependencies
+  (could be installed via `pip`):
+
+  #+BEGIN_SRC sh
+    pip install feedparser
+    pip install click
+  #+END_SRC
+
+* TODO
+  - Cache images references in feed
+    
+* Usage
+
+Usage: *rssbackup.py* [OPTIONS] /URL/
+
+Options:
+  --verbose
+  --dry-run    Do not update cache files
+  --path /PATH/  Path where to store backup files
+  --help       Show this message and exit.
+  
+  
