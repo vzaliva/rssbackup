@@ -21,12 +21,13 @@
     
 * Usage
 
-Usage: *rssbackup.py* [OPTIONS] /URL/
+  #+BEGIN_EXAMPLE
+Usage: rssbackup.py [OPTIONS] URL
 
 Options:
   --verbose
   --dry-run    Do not update cache files
-  --path /PATH/  Path where to store backup files
+  --path PATH  Path where to store backup files
   --help       Show this message and exit.
-  
+#+END_EXAMPLE  
   
