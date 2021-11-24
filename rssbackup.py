@@ -13,11 +13,11 @@ import json
 @click.argument('url')
 def rssbackup(verbose, dry_run,
               path, url):
-    click.echo(click.format_filename(path))
     feed = feedparser.parse(url)
     for e in feed['entries']:
         g = e.id
-        n = (base64.urlsafe_b64encode(g.encode())).decode("ASCII") + ".json"
+        fn = (base64.urlsafe_b64encode(g.encode())).decode("ASCII") + ".json"
+        n = os.path.join(click.format_filename(path), fn)
         if os.path.exists(n):
             if verbose:
                 print('Skipping: "%s"' % e.title)
